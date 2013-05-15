@@ -7658,3 +7658,49 @@ Served asset /application.js - 304 Not Modified (9ms)
 
 Started GET "/assets/ness.png" for 171.66.160.102 at Wed May 15 02:30:48 +0000 2013
 Served asset /ness.png - 304 Not Modified (2ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddSessionsTable (20130429193722)
+Migrating to CreateUsers (20130429194453)
+Migrating to CreatePhotos (20130501190926)
+Migrating to CreateComments (20130501192329)
+Migrating to LoadData (20130501195708)
+Migrating to AddLogin (20130515212019)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddSessionsTable (20130429193722)
+Migrating to CreateUsers (20130429194453)
+Migrating to CreatePhotos (20130501190926)
+Migrating to CreateComments (20130501192329)
+Migrating to LoadData (20130501195708)
+Migrating to AddLogin (20130515212019)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD "login" varchar(255)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddSessionsTable (20130429193722)
+Migrating to CreateUsers (20130429194453)
+Migrating to CreatePhotos (20130501190926)
+Migrating to CreateComments (20130501192329)
+Migrating to LoadData (20130501195708)
+Migrating to AddLogin (20130515212019)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "users" ADD "login" varchar(255)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.8ms)[0m  UPDATE "users" SET "login" = 'bieber' WHERE "users"."id" = 1
+  [1m[36m (0.1ms)[0m  [1mUPDATE "users" SET "login" = 'hilton' WHERE "users"."id" = 2[0m
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "login" = 'obama' WHERE "users"."id" = 3
+  [1m[36m (0.6ms)[0m  [1mUPDATE "users" SET "login" = 'claus' WHERE "users"."id" = 4[0m
+  [1m[35m (0.0ms)[0m  UPDATE "users" SET "login" = 'ousterhout' WHERE "users"."id" = 5
+  [1m[36m (0.1ms)[0m  [1mUPDATE "users" SET "login" = '&lt;name' WHERE "users"."id" = 6[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130515212019')
+  [1m[36m (17.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
