@@ -7610,3 +7610,51 @@ Served asset /application.js - 304 Not Modified (0ms)
 Started GET "/assets/ness.png" for 171.66.172.65 at Fri May 10 04:48:18 +0000 2013
 Served asset /ness.png - 304 Not Modified (0ms)
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/photo/index/1" for 171.66.160.102 at Wed May 15 02:30:47 +0000 2013
+Processing by PhotoController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE (user_id == 1)
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE (photo_id == 2)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE (photo_id == 3)[0m
+  Rendered shared/_photos.html.erb (0.5ms)
+  Rendered photo/index.html.erb within layouts/application (4.4ms)
+Compiled home.js  (180ms)  (pid 16439)
+Compiled application.js  (255ms)  (pid 16439)
+Completed 200 OK in 448ms (Views: 409.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/mufasa.css?body=1" for 171.66.160.102 at Wed May 15 02:30:48 +0000 2013
+Served asset /mufasa.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 171.66.160.102 at Wed May 15 02:30:48 +0000 2013
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 171.66.160.102 at Wed May 15 02:30:48 +0000 2013
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/home.js?body=1" for 171.66.160.102 at Wed May 15 02:30:48 +0000 2013
+Served asset /home.js - 200 OK (2ms)
+
+
+Started GET "/assets/photo.js?body=1" for 171.66.160.102 at Wed May 15 02:30:48 +0000 2013
+Served asset /photo.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 171.66.160.102 at Wed May 15 02:30:48 +0000 2013
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 171.66.160.102 at Wed May 15 02:30:48 +0000 2013
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/ness.png" for 171.66.160.102 at Wed May 15 02:30:48 +0000 2013
+Served asset /ness.png - 304 Not Modified (2ms)

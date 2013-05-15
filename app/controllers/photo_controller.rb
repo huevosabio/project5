@@ -20,7 +20,7 @@ class PhotoController < ApplicationController
             username = usuario.first_name + " " + usuario.last_name
             dummyHash[foto] << {"comment" => comentario.comment, "user" => username, "userid" => id}
         end
-    end
-    @photos = dummyHash
+      end
+      @photos = dummyHash
   end
 end
