@@ -7,11 +7,11 @@ class PhotoController < ApplicationController
       else
           @display_user = @display_user.first_name + " " + @display_user.last_name
       end
-      photos = Photo.find(:all, :conditions => "user_id == CAST( " + params["id"] + " AS varying(140) )")
+      photos = Photo.find(:all, :conditions => "user_id = CAST( " + params["id"] + " AS varying(140) )")
       dummyHash = Hash.new
       for foto in photos
         dummyHash[foto] = Array.new
-        comentarios = Comment.find(:all, :conditions => ("photo_id == CAST( " + foto.id.to_s + " AS varying(140) )"))
+        comentarios = Comment.find(:all, :conditions => ("photo_id = CAST( " + foto.id.to_s + " AS varying(140) )"))
         for comentario in comentarios
             id = comentario.user_id
             puts id
