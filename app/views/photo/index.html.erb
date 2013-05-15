@@ -1,0 +1,12 @@
+<h1><%=  @display_user %></h1>
+<% @photos.each do |foto, commentArray| %>
+    <ul>
+    <img src="/images/<%=foto.file_name%>"><br>
+    <b>Comments</b>
+    <ul class="boxlisting">
+    <% for comment in commentArray %>
+        <li><%= render(:partial => "shared/photos",:locals => {:comment => comment["comment"], :user => comment["user"], :userid => comment["userid"]})%></li>
+    <% end %>
+    </ul>
+    </ul>
+<% end %>

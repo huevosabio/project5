@@ -1,0 +1,6 @@
+<h1><%=@title%><h1>
+<ul class="boxlisting">
+    <% for user in @all_users %>
+        <li><div class="quiz"><%= render(:partial => "shared/listuser",:locals => {:name => user.first_name, :id => user.id})%></div></li>
+    <% end %>
+</ul>

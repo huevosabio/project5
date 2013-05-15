@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @title%></title>
+  <%= stylesheet_link_tag "mufasa.css" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class=header><ul class=header>
+<li class=header style=float:left><%=image_tag ("ness.png")%></li><li class=header style=float:left>Ramon's Stuff</li>
+</ul></div><div style=min-height:80px></div>
+<div class=content><%= yield %></div>
+<div class=content><iframe frameborder="0" height="480" width="100%" allowFullScreen webkitallowfullscreen="true" mozallowfullscreen="true" src="http://skfb.ly/lkj3hg210?autostart=0&transparent=0&autospin=0&controls=1"></iframe></div>
+</body>
+</html>
