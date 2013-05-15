@@ -1,7 +1,7 @@
 class PhotoController < ApplicationController
   def index
       @display_user = User.find_by_id(params["id"])
-      if @display_user == nil:
+      if @display_user == nil
           @display_user = "User not Found"
           return
       else
