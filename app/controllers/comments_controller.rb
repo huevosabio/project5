@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
           @title = "New Comment"
           @photo = Photo.find_by_id(params[:id])
       else
-          redirect_to (:controller => 'users', :action => 'login', :flash => {:message =>'Please login to comment on photos'})
+          redirect_to (:controller => 'users', :action => 'login')
       end
   end
 
