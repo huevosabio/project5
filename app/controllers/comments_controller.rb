@@ -9,8 +9,9 @@ class CommentsController < ApplicationController
   end
 
   def create
-      comment = Comment.create(:comment => params[:comment][:comment], :photo_id => params[:comment][:photo_id], :user_id => params[:comment][:user_id])
-      comment.save!
-      redirect_to (:controller => 'photo', :action => 'index', :id => params[:comment][:photo_id])
+      comment = Comment.new(:comment => params[:comment][:comment], :photo_id => params[:id], :user_id => params[:comment][:user_id])
+      if comment.save
+          redirect_to (:controller => 'photo', :action => 'index', :id => params[:comment][:photo_id])
+      end
   end
 end

@@ -7,6 +7,7 @@
     <% for comment in commentArray %>
         <li><%= render(:partial => "shared/photos",:locals => {:comment => comment["comment"], :user => comment["user"], :userid => comment["userid"]})%></li>
     <% end %>
+    <li><a class=actionlist href='/comments/new/<%= foto.id %>'>Comment!</a></li>
     </ul>
     </ul>
 <% end %>

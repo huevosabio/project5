@@ -14,9 +14,9 @@ class PhotoController < ApplicationController
         comentarios = Comment.find(:all, :conditions => ("photo_id = CAST( " + foto.id.to_s + " AS character varying(140) )"))
         for comentario in comentarios
             id = comentario.user_id
-            puts id
+            #puts id
             usuario = User.find(id)
-            puts usuario
+            #puts usuario
             username = usuario.first_name + " " + usuario.last_name
             dummyHash[foto] << {"comment" => comentario.comment, "user" => username, "userid" => id}
         end
