@@ -9,6 +9,7 @@
 <body>
 <div class=header><ul class=header>
 <li class=header style=float:left><%=image_tag ("ness.png")%></li><li class=header style=float:left>Ramon's Stuff</li>
+<%= render(:partial => "shared/logstatus") %>
 </ul></div><div style=min-height:80px></div>
 <div class=content><%= yield %></div>
 </body>

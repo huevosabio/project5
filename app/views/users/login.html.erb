@@ -1,0 +1,8 @@
+<h1><%=@title%></h1>
+<p><%= flash[:message] %>
+<%= form_for(:user, :url => {:action => :post_login}) do |form| %>
+    <%= form.label(:username, "Username:")%>
+    <%= form.text_field(:username) %>
+    <%= form.submit "Login" %>
+<% end %>
+</ul>

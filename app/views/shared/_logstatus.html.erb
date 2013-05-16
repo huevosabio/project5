@@ -1,0 +1,7 @@
+<% if session[:id] %>
+    <li class=header><a class=actionlist href="/users/logout">Logout</a></li>
+    <li class=header>Welcome, <%= session[:name] %>!</li>
+<% else %>
+    <li class=header><a class=actionlist href="/users/login">Login</a><li>
+    <li class=header>Welcome, Guest!<li>
+<%end%>
