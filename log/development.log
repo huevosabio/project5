@@ -11973,3 +11973,393 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/ness.png" for 171.66.172.73 at Thu May 16 04:22:24 +0000 2013
 Served asset /ness.png - 304 Not Modified (0ms)
+
+
+Started GET "/comments/new/2" for 171.66.172.73 at Thu May 16 04:27:34 +0000 2013
+Processing by CommentsController#new as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = 2 LIMIT 1[0m
+  Rendered comments/new.html.erb within layouts/application (1.7ms)
+  Rendered shared/_logstatus.html.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 30.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/mufasa.css?body=1" for 171.66.172.73 at Thu May 16 04:27:34 +0000 2013
+Served asset /mufasa.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 171.66.172.73 at Thu May 16 04:27:34 +0000 2013
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 171.66.172.73 at Thu May 16 04:27:34 +0000 2013
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 171.66.172.73 at Thu May 16 04:27:34 +0000 2013
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photo.js?body=1" for 171.66.172.73 at Thu May 16 04:27:34 +0000 2013
+Served asset /photo.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 171.66.172.73 at Thu May 16 04:27:34 +0000 2013
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 171.66.172.73 at Thu May 16 04:27:34 +0000 2013
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 171.66.172.73 at Thu May 16 04:27:34 +0000 2013
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ness.png" for 171.66.172.73 at Thu May 16 04:27:34 +0000 2013
+Served asset /ness.png - 304 Not Modified (0ms)
+
+
+Started POST "/comments/create?id=2" for 171.66.172.73 at Thu May 16 04:27:36 +0000 2013
+Processing by CommentsController#create as HTML
+  Parameters: {"id"=>"2", "comment"=>{"photo_id"=>"1", "comment"=>"", "user_id"=>"3"}, "utf8"=>"✓", "authenticity_token"=>"T1f5Oxl1TKnNLHkd/X1vXPtGNRzRMs7EMQbyg1ey7YA=", "commit"=>"Post Comment"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered comments/create.html.erb within layouts/application (0.3ms)
+  Rendered shared/_logstatus.html.erb (0.1ms)
+Completed 200 OK in 82ms (Views: 27.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/mufasa.css?body=1" for 171.66.172.73 at Thu May 16 04:27:36 +0000 2013
+Served asset /mufasa.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 171.66.172.73 at Thu May 16 04:27:36 +0000 2013
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 171.66.172.73 at Thu May 16 04:27:36 +0000 2013
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 171.66.172.73 at Thu May 16 04:27:36 +0000 2013
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 171.66.172.73 at Thu May 16 04:27:36 +0000 2013
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photo.js?body=1" for 171.66.172.73 at Thu May 16 04:27:36 +0000 2013
+Served asset /photo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 171.66.172.73 at Thu May 16 04:27:36 +0000 2013
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 171.66.172.73 at Thu May 16 04:27:36 +0000 2013
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ness.png" for 171.66.172.73 at Thu May 16 04:27:37 +0000 2013
+Served asset /ness.png - 304 Not Modified (0ms)
+
+
+Started POST "/comments/create?id=2" for 171.66.172.73 at Thu May 16 04:28:36 +0000 2013
+Processing by CommentsController#create as HTML
+  Parameters: {"id"=>"2", "comment"=>{"photo_id"=>"1", "comment"=>"", "user_id"=>"3"}, "utf8"=>"✓", "authenticity_token"=>"T1f5Oxl1TKnNLHkd/X1vXPtGNRzRMs7EMQbyg1ey7YA=", "commit"=>"Post Comment"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Redirected to http://ec2-50-17-62-212.compute-1.amazonaws.com:3000/comments/new/2
+Completed 302 Found in 11ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/comments/new/2" for 171.66.172.73 at Thu May 16 04:28:36 +0000 2013
+Processing by CommentsController#new as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 2 LIMIT 1
+  Rendered comments/new.html.erb within layouts/application (1.4ms)
+  Rendered shared/_logstatus.html.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 28.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 171.66.172.73 at Thu May 16 04:28:37 +0000 2013
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 171.66.172.73 at Thu May 16 04:28:37 +0000 2013
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mufasa.css?body=1" for 171.66.172.73 at Thu May 16 04:28:37 +0000 2013
+Served asset /mufasa.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 171.66.172.73 at Thu May 16 04:28:37 +0000 2013
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 171.66.172.73 at Thu May 16 04:28:37 +0000 2013
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photo.js?body=1" for 171.66.172.73 at Thu May 16 04:28:37 +0000 2013
+Served asset /photo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 171.66.172.73 at Thu May 16 04:28:37 +0000 2013
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 171.66.172.73 at Thu May 16 04:28:37 +0000 2013
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ness.png" for 171.66.172.73 at Thu May 16 04:28:37 +0000 2013
+Served asset /ness.png - 304 Not Modified (0ms)
+
+
+Started POST "/comments/create?id=2" for 171.66.172.73 at Thu May 16 04:29:32 +0000 2013
+Processing by CommentsController#create as HTML
+  Parameters: {"id"=>"2", "comment"=>{"photo_id"=>"1", "comment"=>"", "user_id"=>"3"}, "utf8"=>"✓", "authenticity_token"=>"T1f5Oxl1TKnNLHkd/X1vXPtGNRzRMs7EMQbyg1ey7YA=", "commit"=>"Post Comment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Redirected to http://ec2-50-17-62-212.compute-1.amazonaws.com:3000/comments/new/2
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/comments/new/2" for 171.66.172.73 at Thu May 16 04:29:33 +0000 2013
+Processing by CommentsController#new as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = 2 LIMIT 1[0m
+  Rendered comments/new.html.erb within layouts/application (2.0ms)
+  Rendered shared/_logstatus.html.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/mufasa.css?body=1" for 171.66.172.73 at Thu May 16 04:29:33 +0000 2013
+Served asset /mufasa.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 171.66.172.73 at Thu May 16 04:29:33 +0000 2013
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 171.66.172.73 at Thu May 16 04:29:33 +0000 2013
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 171.66.172.73 at Thu May 16 04:29:33 +0000 2013
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photo.js?body=1" for 171.66.172.73 at Thu May 16 04:29:33 +0000 2013
+Served asset /photo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 171.66.172.73 at Thu May 16 04:29:33 +0000 2013
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 171.66.172.73 at Thu May 16 04:29:33 +0000 2013
+Served asset /users.js - 304 Not Modified (70ms)
+
+
+Started GET "/assets/application.js?body=1" for 171.66.172.73 at Thu May 16 04:29:33 +0000 2013
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ness.png" for 171.66.172.73 at Thu May 16 04:29:33 +0000 2013
+Served asset /ness.png - 304 Not Modified (0ms)
+
+
+Started POST "/comments/create?id=2" for 171.66.172.73 at Thu May 16 04:29:38 +0000 2013
+Processing by CommentsController#create as HTML
+  Parameters: {"id"=>"2", "comment"=>{"photo_id"=>"1", "comment"=>"ok ok ", "user_id"=>"3"}, "utf8"=>"✓", "authenticity_token"=>"T1f5Oxl1TKnNLHkd/X1vXPtGNRzRMs7EMQbyg1ey7YA=", "commit"=>"Post Comment"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "comments" ("comment", "date_time", "photo_id", "user_id") VALUES (?, ?, ?, ?)[0m  [["comment", "ok ok "], ["date_time", nil], ["photo_id", "2"], ["user_id", "3"]]
+  [1m[35m (18.7ms)[0m  commit transaction
+Redirected to http://ec2-50-17-62-212.compute-1.amazonaws.com:3000/photo/index?id=1
+Completed 302 Found in 26ms (ActiveRecord: 20.8ms)
+
+
+Started GET "/photo/index?id=1" for 171.66.172.73 at Thu May 16 04:29:39 +0000 2013
+Processing by PhotoController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE (user_id = CAST( 1 AS character varying(140) ))
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE (photo_id = CAST( 2 AS character varying(140) ))[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE (photo_id = CAST( 3 AS character varying(140) ))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered photo/index.html.erb within layouts/application (6.1ms)
+  Rendered shared/_logstatus.html.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 33.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/mufasa.css?body=1" for 171.66.172.73 at Thu May 16 04:29:39 +0000 2013
+Served asset /mufasa.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 171.66.172.73 at Thu May 16 04:29:39 +0000 2013
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 171.66.172.73 at Thu May 16 04:29:39 +0000 2013
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 171.66.172.73 at Thu May 16 04:29:39 +0000 2013
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 171.66.172.73 at Thu May 16 04:29:39 +0000 2013
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photo.js?body=1" for 171.66.172.73 at Thu May 16 04:29:39 +0000 2013
+Served asset /photo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 171.66.172.73 at Thu May 16 04:29:39 +0000 2013
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 171.66.172.73 at Thu May 16 04:29:39 +0000 2013
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ness.png" for 171.66.172.73 at Thu May 16 04:29:39 +0000 2013
+Served asset /ness.png - 304 Not Modified (0ms)
+
+
+Started GET "/comments/new/2" for 171.66.172.73 at Thu May 16 04:29:44 +0000 2013
+Processing by CommentsController#new as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 2 LIMIT 1
+  Rendered comments/new.html.erb within layouts/application (1.5ms)
+  Rendered shared/_logstatus.html.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 171.66.172.73 at Thu May 16 04:29:44 +0000 2013
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mufasa.css?body=1" for 171.66.172.73 at Thu May 16 04:29:44 +0000 2013
+Served asset /mufasa.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 171.66.172.73 at Thu May 16 04:29:44 +0000 2013
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 171.66.172.73 at Thu May 16 04:29:44 +0000 2013
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 171.66.172.73 at Thu May 16 04:29:44 +0000 2013
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photo.js?body=1" for 171.66.172.73 at Thu May 16 04:29:44 +0000 2013
+Served asset /photo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 171.66.172.73 at Thu May 16 04:29:44 +0000 2013
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 171.66.172.73 at Thu May 16 04:29:44 +0000 2013
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ness.png" for 171.66.172.73 at Thu May 16 04:29:45 +0000 2013
+Served asset /ness.png - 304 Not Modified (0ms)
+
+
+Started POST "/comments/create?id=2" for 171.66.172.73 at Thu May 16 04:29:53 +0000 2013
+Processing by CommentsController#create as HTML
+  Parameters: {"id"=>"2", "comment"=>{"photo_id"=>"1", "comment"=>"It's done!", "user_id"=>"3"}, "utf8"=>"✓", "authenticity_token"=>"T1f5Oxl1TKnNLHkd/X1vXPtGNRzRMs7EMQbyg1ey7YA=", "commit"=>"Post Comment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.6ms)[0m  INSERT INTO "comments" ("comment", "date_time", "photo_id", "user_id") VALUES (?, ?, ?, ?)  [["comment", "It's done!"], ["date_time", nil], ["photo_id", "2"], ["user_id", "3"]]
+  [1m[36m (8.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://ec2-50-17-62-212.compute-1.amazonaws.com:3000/photo/index?id=1
+Completed 302 Found in 20ms (ActiveRecord: 14.4ms)
+
+
+Started GET "/photo/index?id=1" for 171.66.172.73 at Thu May 16 04:29:53 +0000 2013
+Processing by PhotoController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (user_id = CAST( 1 AS character varying(140) ))[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE (photo_id = CAST( 2 AS character varying(140) ))
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE (photo_id = CAST( 3 AS character varying(140) ))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered photo/index.html.erb within layouts/application (11.5ms)
+  Rendered shared/_logstatus.html.erb (0.1ms)
+Completed 200 OK in 61ms (Views: 41.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/mufasa.css?body=1" for 171.66.172.73 at Thu May 16 04:29:53 +0000 2013
+Served asset /mufasa.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 171.66.172.73 at Thu May 16 04:29:53 +0000 2013
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 171.66.172.73 at Thu May 16 04:29:53 +0000 2013
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 171.66.172.73 at Thu May 16 04:29:53 +0000 2013
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 171.66.172.73 at Thu May 16 04:29:53 +0000 2013
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photo.js?body=1" for 171.66.172.73 at Thu May 16 04:29:53 +0000 2013
+Served asset /photo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 171.66.172.73 at Thu May 16 04:29:53 +0000 2013
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 171.66.172.73 at Thu May 16 04:29:53 +0000 2013
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ness.png" for 171.66.172.73 at Thu May 16 04:29:53 +0000 2013
+Served asset /ness.png - 304 Not Modified (0ms)
