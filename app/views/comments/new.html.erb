@@ -1,0 +1,10 @@
+<h1>New Comment</h1>
+<img src="/images/<%=@photo.file_name%>"><br>
+<%= form_for(:comment, :url => {:action => :create, :id => @photo.id}) do |form| %>
+    <%= form.label(:comment, "Comment:")%>
+    <%= form.text_field(:comment) %>
+    <%= form.hidden_field :user_id, :value => session[:id]%>
+    <%= form.hidden_field :photo_id, :value => @photo.user_id %>
+    <%= form.submit "Post Comment" %>
+<% end %>
+</ul>

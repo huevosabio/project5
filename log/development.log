@@ -9853,3 +9853,958 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/ness.png" for 171.66.41.162 at Thu May 16 00:49:21 +0000 2013
 Served asset /ness.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/users/login" for 171.66.172.73 at Thu May 16 03:11:10 +0000 2013
+Processing by UsersController#login as HTML
+  Rendered users/login.html.erb within layouts/application (3.3ms)
+Compiled comments.js  (182ms)  (pid 19862)
+Compiled application.js  (290ms)  (pid 19862)
+  Rendered shared/_logstatus.html.erb (0.4ms)
+Completed 200 OK in 359ms (Views: 358.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/mufasa.css?body=1" for 171.66.172.73 at Thu May 16 03:11:11 +0000 2013
+Served asset /mufasa.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/comments.js?body=1" for 171.66.172.73 at Thu May 16 03:11:11 +0000 2013
+Served asset /comments.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 171.66.172.73 at Thu May 16 03:11:11 +0000 2013
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 171.66.172.73 at Thu May 16 03:11:11 +0000 2013
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/home.js?body=1" for 171.66.172.73 at Thu May 16 03:11:11 +0000 2013
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/photo.js?body=1" for 171.66.172.73 at Thu May 16 03:11:11 +0000 2013
+Served asset /photo.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 171.66.172.73 at Thu May 16 03:11:11 +0000 2013
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 171.66.172.73 at Thu May 16 03:11:11 +0000 2013
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/ness.png" for 171.66.172.73 at Thu May 16 03:11:11 +0000 2013
+Served asset /ness.png - 304 Not Modified (2ms)
+
+
+Started POST "/users/post_login" for 171.66.172.73 at Thu May 16 03:11:14 +0000 2013
+Processing by UsersController#post_login as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"obama"}, "authenticity_token"=>"Lfym8AX3PLrnCzcO8EPq0tv5E4+otSoSYpnGZ44W0N8=", "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'obama' LIMIT 1[0m
+Redirected to http://ec2-50-17-62-212.compute-1.amazonaws.com:3000/photo/index?id=3
+Completed 302 Found in 7ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/photo/index?id=3" for 171.66.172.73 at Thu May 16 03:11:14 +0000 2013
+Processing by PhotoController#index as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (user_id = CAST( 3 AS character varying(140) ))[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE (photo_id = CAST( 6 AS character varying(140) ))
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE (photo_id = CAST( 7 AS character varying(140) ))[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE (photo_id = CAST( 8 AS character varying(140) ))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered shared/_photos.html.erb (0.3ms)
+  Rendered shared/_photos.html.erb (0.2ms)
+  Rendered shared/_photos.html.erb (0.2ms)
+  Rendered photo/index.html.erb within layouts/application (7.0ms)
+  Rendered shared/_logstatus.html.erb (0.1ms)
+Completed 200 OK in 127ms (Views: 97.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/mufasa.css?body=1" for 171.66.172.73 at Thu May 16 03:11:14 +0000 2013
+Served asset /mufasa.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 171.66.172.73 at Thu May 16 03:11:14 +0000 2013
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 171.66.172.73 at Thu May 16 03:11:14 +0000 2013
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 171.66.172.73 at Thu May 16 03:11:14 +0000 2013
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photo.js?body=1" for 171.66.172.73 at Thu May 16 03:11:14 +0000 2013
+Served asset /photo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 171.66.172.73 at Thu May 16 03:11:14 +0000 2013
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 171.66.172.73 at Thu May 16 03:11:14 +0000 2013
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ness.png" for 171.66.172.73 at Thu May 16 03:11:14 +0000 2013
+Served asset /ness.png - 304 Not Modified (0ms)
+
+
+Started GET "/comments/new/1" for 171.66.172.73 at Thu May 16 03:11:46 +0000 2013
+
+SyntaxError (/home/ec2-user/project5/app/controllers/comments_controller.rb:7: syntax error, unexpected ',', expecting kEND
+... 'users', :action => 'login'), :flash => {:message =>'Please...
+                              ^):
+  activesupport (3.2.13) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:469:in `load_file'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:192:in `const_missing'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.13) lib/active_support/inflector/methods.rb:219:in `constantize'
+  activesupport (3.2.13) lib/active_support/inflector/methods.rb:218:in `each'
+  activesupport (3.2.13) lib/active_support/inflector/methods.rb:218:in `constantize'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__1597610343__call__4__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `send'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `send'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.4.5) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50
+  script/rails:6:in `require'
+  script/rails:6
+
+
+  Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.2ms)
+
+
+Started GET "/comments/new/1" for 171.66.172.73 at Thu May 16 03:20:32 +0000 2013
+
+SyntaxError (/home/ec2-user/project5/app/controllers/comments_controller.rb:7: syntax error, unexpected ',', expecting kEND
+... 'users', :action => 'login'), flash[:message] => 'Please lo...
+                              ^
+/home/ec2-user/project5/app/controllers/comments_controller.rb:7: syntax error, unexpected tASSOC, expecting kEND
+...> 'login'), flash[:message] => 'Please login to comment on p...
+                              ^):
+  activesupport (3.2.13) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:469:in `load_file'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:192:in `const_missing'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.13) lib/active_support/inflector/methods.rb:219:in `constantize'
+  activesupport (3.2.13) lib/active_support/inflector/methods.rb:218:in `each'
+  activesupport (3.2.13) lib/active_support/inflector/methods.rb:218:in `constantize'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__1597610343__call__4__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `send'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `send'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.4.5) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50
+  script/rails:6:in `require'
+  script/rails:6
+
+
+  Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.5ms)
+
+
+Started GET "/comments/new/1" for 171.66.172.73 at Thu May 16 03:21:38 +0000 2013
+Processing by CommentsController#new as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 1 LIMIT 1
+  Rendered comments/new.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined method `comment' for #<Photo:0x7fdd1118f150>):
+    2: <img src="/images/<%=@photo.file_name%>"><br>
+    3: <%= form_for(:photo, :url => {:action => :create, :id => @photo.id}) do |form| %>
+    4:     <%= form.label(:comment, "Comment:")%>
+    5:     <%= form.text_field(:comment) %>
+    6:     <%= form.hidden_field_tag "commenter_id", session[:id] %>
+    7:     <%= form.hidden_field_tag "owner_id", @photo.user_id %>
+    8:     <%= form.submit "Post Comment" %>
+  app/views/comments/new.html.erb:5:in `_app_views_comments_new_html_erb__472828164_70293725555620'
+  app/views/comments/new.html.erb:3:in `_app_views_comments_new_html_erb__472828164_70293725555620'
+
+
+  Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.7ms)
+
+
+Started GET "/comments/new/1" for 171.66.172.73 at Thu May 16 03:22:51 +0000 2013
+Processing by CommentsController#new as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = 1 LIMIT 1[0m
+  Rendered comments/new.html.erb within layouts/application (9.3ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `hidden_field_tag' for #<ActionView::Helpers::FormBuilder:0x7fdd10f19128>):
+    3: <%= form_for(:comment, :url => {:action => :create, :id => @photo.id}) do |form| %>
+    4:     <%= form.label(:comment, "Comment:")%>
+    5:     <%= form.text_field(:comment) %>
+    6:     <%= form.hidden_field_tag "commenter_id", session[:id] %>
+    7:     <%= form.hidden_field_tag "owner_id", @photo.user_id %>
+    8:     <%= form.submit "Post Comment" %>
+    9: <% end %>
+  app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__472828164_70293724422260'
+  app/views/comments/new.html.erb:3:in `_app_views_comments_new_html_erb__472828164_70293724422260'
+
+
+  Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.5ms)
+
+
+Started GET "/comments/new/1" for 171.66.172.73 at Thu May 16 03:28:50 +0000 2013
+Processing by CommentsController#new as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 1 LIMIT 1
+  Rendered comments/new.html.erb within layouts/application (2.6ms)
+  Rendered shared/_logstatus.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 33.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 171.66.172.73 at Thu May 16 03:28:50 +0000 2013
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mufasa.css?body=1" for 171.66.172.73 at Thu May 16 03:28:50 +0000 2013
+Served asset /mufasa.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 171.66.172.73 at Thu May 16 03:28:50 +0000 2013
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 171.66.172.73 at Thu May 16 03:28:50 +0000 2013
+Served asset /comments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 171.66.172.73 at Thu May 16 03:28:50 +0000 2013
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photo.js?body=1" for 171.66.172.73 at Thu May 16 03:28:50 +0000 2013
+Served asset /photo.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 171.66.172.73 at Thu May 16 03:28:50 +0000 2013
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 171.66.172.73 at Thu May 16 03:28:50 +0000 2013
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ness.png" for 171.66.172.73 at Thu May 16 03:28:50 +0000 2013
+Served asset /ness.png - 304 Not Modified (0ms)
+
+
+Started POST "/comments/create?id=1" for 171.66.172.73 at Thu May 16 03:28:56 +0000 2013
+Processing by CommentsController#create as HTML
+  Parameters: {"id"=>"1", "comment"=>{"photo_id"=>"5", "comment"=>"This is Ramon's trial", "user_id"=>"3"}, "utf8"=>"✓", "authenticity_token"=>"Lfym8AX3PLrnCzcO8EPq0tv5E4+otSoSYpnGZ44W0N8=", "commit"=>"Post Comment"}
+Completed 500 Internal Server Error in 0ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/comments_controller.rb:12:in `create'
+
+
+  Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.9ms)
+
+
+Started POST "/comments/create?id=1" for 171.66.172.73 at Thu May 16 03:32:32 +0000 2013
+Processing by CommentsController#create as HTML
+  Parameters: {"id"=>"1", "comment"=>{"photo_id"=>"5", "comment"=>"This is Ramon's trial", "user_id"=>"3"}, "utf8"=>"✓", "authenticity_token"=>"Lfym8AX3PLrnCzcO8EPq0tv5E4+otSoSYpnGZ44W0N8=", "commit"=>"Post Comment"}
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/comments_controller.rb:13:in `create'
+
+
+  Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started POST "/comments/create?id=1" for 171.66.172.73 at Thu May 16 03:32:40 +0000 2013
+Processing by CommentsController#create as HTML
+  Parameters: {"id"=>"1", "comment"=>{"photo_id"=>"5", "comment"=>"This is Ramon's trial", "user_id"=>"3"}, "utf8"=>"✓", "authenticity_token"=>"Lfym8AX3PLrnCzcO8EPq0tv5E4+otSoSYpnGZ44W0N8=", "commit"=>"Post Comment"}
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/comments_controller.rb:13:in `create'
+
+
+  Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.4ms)
+
+
+Started GET "/comments/new/1" for 171.66.172.73 at Thu May 16 03:33:00 +0000 2013
+Processing by CommentsController#new as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = 1 LIMIT 1[0m
+  Rendered comments/new.html.erb within layouts/application (1.5ms)
+  Rendered shared/_logstatus.html.erb (0.1ms)
+Completed 200 OK in 49ms (Views: 34.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/mufasa.css?body=1" for 171.66.172.73 at Thu May 16 03:33:00 +0000 2013
+Served asset /mufasa.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 171.66.172.73 at Thu May 16 03:33:00 +0000 2013
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 171.66.172.73 at Thu May 16 03:33:00 +0000 2013
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 171.66.172.73 at Thu May 16 03:33:00 +0000 2013
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 171.66.172.73 at Thu May 16 03:33:00 +0000 2013
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photo.js?body=1" for 171.66.172.73 at Thu May 16 03:33:00 +0000 2013
+Served asset /photo.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 171.66.172.73 at Thu May 16 03:33:00 +0000 2013
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 171.66.172.73 at Thu May 16 03:33:00 +0000 2013
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ness.png" for 171.66.172.73 at Thu May 16 03:33:00 +0000 2013
+Served asset /ness.png - 304 Not Modified (0ms)
+
+
+Started POST "/comments/create?id=1" for 171.66.172.73 at Thu May 16 03:33:07 +0000 2013
+Processing by CommentsController#create as HTML
+  Parameters: {"id"=>"1", "comment"=>{"photo_id"=>"5", "comment"=>"This is Ramon's trial", "user_id"=>"3"}, "utf8"=>"✓", "authenticity_token"=>"Lfym8AX3PLrnCzcO8EPq0tv5E4+otSoSYpnGZ44W0N8=", "commit"=>"Post Comment"}
+Redirected to http://ec2-50-17-62-212.compute-1.amazonaws.com:3000/photo/index?id=5
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/photo/index?id=5" for 171.66.172.73 at Thu May 16 03:33:07 +0000 2013
+Processing by PhotoController#index as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (user_id = CAST( 5 AS character varying(140) ))[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE (photo_id = CAST( 1 AS character varying(140) ))
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered photo/index.html.erb within layouts/application (2.7ms)
+  Rendered shared/_logstatus.html.erb (0.1ms)
+Completed 200 OK in 50ms (Views: 30.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/mufasa.css?body=1" for 171.66.172.73 at Thu May 16 03:33:07 +0000 2013
+Served asset /mufasa.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 171.66.172.73 at Thu May 16 03:33:07 +0000 2013
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 171.66.172.73 at Thu May 16 03:33:07 +0000 2013
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 171.66.172.73 at Thu May 16 03:33:07 +0000 2013
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 171.66.172.73 at Thu May 16 03:33:07 +0000 2013
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photo.js?body=1" for 171.66.172.73 at Thu May 16 03:33:07 +0000 2013
+Served asset /photo.js - 304 Not Modified (69ms)
+
+
+Started GET "/assets/users.js?body=1" for 171.66.172.73 at Thu May 16 03:33:07 +0000 2013
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 171.66.172.73 at Thu May 16 03:33:07 +0000 2013
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ness.png" for 171.66.172.73 at Thu May 16 03:33:08 +0000 2013
+Served asset /ness.png - 304 Not Modified (0ms)
+
+
+Started GET "/photo/index?id=5" for 171.66.172.73 at Thu May 16 03:33:13 +0000 2013
+Processing by PhotoController#index as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (user_id = CAST( 5 AS character varying(140) ))[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE (photo_id = CAST( 1 AS character varying(140) ))
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered photo/index.html.erb within layouts/application (2.7ms)
+  Rendered shared/_logstatus.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 29.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/mufasa.css?body=1" for 171.66.172.73 at Thu May 16 03:33:13 +0000 2013
+Served asset /mufasa.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 171.66.172.73 at Thu May 16 03:33:13 +0000 2013
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photo.js?body=1" for 171.66.172.73 at Thu May 16 03:33:13 +0000 2013
+Served asset /photo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 171.66.172.73 at Thu May 16 03:33:13 +0000 2013
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 171.66.172.73 at Thu May 16 03:33:13 +0000 2013
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 171.66.172.73 at Thu May 16 03:33:13 +0000 2013
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 171.66.172.73 at Thu May 16 03:33:13 +0000 2013
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 171.66.172.73 at Thu May 16 03:33:13 +0000 2013
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ness.png" for 171.66.172.73 at Thu May 16 03:33:13 +0000 2013
+Served asset /ness.png - 304 Not Modified (0ms)
+
+
+Started GET "/comments/new/3" for 171.66.172.73 at Thu May 16 03:34:23 +0000 2013
+Processing by CommentsController#new as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 3 LIMIT 1
+  Rendered comments/new.html.erb within layouts/application (1.7ms)
+  Rendered shared/_logstatus.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 30.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/mufasa.css?body=1" for 171.66.172.73 at Thu May 16 03:34:24 +0000 2013
+Served asset /mufasa.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 171.66.172.73 at Thu May 16 03:34:24 +0000 2013
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 171.66.172.73 at Thu May 16 03:34:24 +0000 2013
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 171.66.172.73 at Thu May 16 03:34:24 +0000 2013
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 171.66.172.73 at Thu May 16 03:34:24 +0000 2013
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photo.js?body=1" for 171.66.172.73 at Thu May 16 03:34:24 +0000 2013
+Served asset /photo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 171.66.172.73 at Thu May 16 03:34:24 +0000 2013
+Served asset /users.js - 304 Not Modified (62ms)
+
+
+Started GET "/assets/application.js?body=1" for 171.66.172.73 at Thu May 16 03:34:24 +0000 2013
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ness.png" for 171.66.172.73 at Thu May 16 03:34:24 +0000 2013
+Served asset /ness.png - 304 Not Modified (0ms)
+
+
+Started POST "/comments/create?id=3" for 171.66.172.73 at Thu May 16 03:34:29 +0000 2013
+Processing by CommentsController#create as HTML
+  Parameters: {"id"=>"3", "comment"=>{"photo_id"=>"1", "comment"=>"Waaay to gay", "user_id"=>"3"}, "utf8"=>"✓", "authenticity_token"=>"Lfym8AX3PLrnCzcO8EPq0tv5E4+otSoSYpnGZ44W0N8=", "commit"=>"Post Comment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "comments" ("comment", "date_time", "photo_id", "user_id") VALUES (?, ?, ?, ?)  [["comment", "Waaay to gay"], ["date_time", nil], ["photo_id", "1"], ["user_id", "3"]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://ec2-50-17-62-212.compute-1.amazonaws.com:3000/photo/index?id=1
+Completed 302 Found in 30ms (ActiveRecord: 14.5ms)
+
+
+Started GET "/photo/index?id=1" for 171.66.172.73 at Thu May 16 03:34:29 +0000 2013
+Processing by PhotoController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (user_id = CAST( 1 AS character varying(140) ))[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE (photo_id = CAST( 2 AS character varying(140) ))
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE (photo_id = CAST( 3 AS character varying(140) ))
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered photo/index.html.erb within layouts/application (1.3ms)
+  Rendered shared/_logstatus.html.erb (0.1ms)
+Completed 200 OK in 49ms (Views: 28.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 171.66.172.73 at Thu May 16 03:34:30 +0000 2013
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mufasa.css?body=1" for 171.66.172.73 at Thu May 16 03:34:30 +0000 2013
+Served asset /mufasa.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 171.66.172.73 at Thu May 16 03:34:30 +0000 2013
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 171.66.172.73 at Thu May 16 03:34:30 +0000 2013
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 171.66.172.73 at Thu May 16 03:34:30 +0000 2013
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photo.js?body=1" for 171.66.172.73 at Thu May 16 03:34:30 +0000 2013
+Served asset /photo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 171.66.172.73 at Thu May 16 03:34:30 +0000 2013
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 171.66.172.73 at Thu May 16 03:34:30 +0000 2013
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ness.png" for 171.66.172.73 at Thu May 16 03:34:30 +0000 2013
+Served asset /ness.png - 304 Not Modified (0ms)
+
+
+Started GET "/photo/index?id=1" for 171.66.172.73 at Thu May 16 03:34:39 +0000 2013
+Processing by PhotoController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE (user_id = CAST( 1 AS character varying(140) ))
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE (photo_id = CAST( 2 AS character varying(140) ))[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE (photo_id = CAST( 3 AS character varying(140) ))[0m
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered photo/index.html.erb within layouts/application (1.1ms)
+  Rendered shared/_logstatus.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 28.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/mufasa.css?body=1" for 171.66.172.73 at Thu May 16 03:34:39 +0000 2013
+Served asset /mufasa.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 171.66.172.73 at Thu May 16 03:34:39 +0000 2013
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 171.66.172.73 at Thu May 16 03:34:39 +0000 2013
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 171.66.172.73 at Thu May 16 03:34:39 +0000 2013
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 171.66.172.73 at Thu May 16 03:34:39 +0000 2013
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photo.js?body=1" for 171.66.172.73 at Thu May 16 03:34:39 +0000 2013
+Served asset /photo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 171.66.172.73 at Thu May 16 03:34:39 +0000 2013
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 171.66.172.73 at Thu May 16 03:34:39 +0000 2013
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ness.png" for 171.66.172.73 at Thu May 16 03:34:39 +0000 2013
+Served asset /ness.png - 304 Not Modified (0ms)
+
+
+Started POST "/comments/create?id=3" for 171.66.172.73 at Thu May 16 03:35:43 +0000 2013
+Processing by CommentsController#create as HTML
+  Parameters: {"id"=>"3", "comment"=>{"photo_id"=>"1", "comment"=>"Waaay to gay", "user_id"=>"3"}, "utf8"=>"✓", "authenticity_token"=>"Lfym8AX3PLrnCzcO8EPq0tv5E4+otSoSYpnGZ44W0N8=", "commit"=>"Post Comment"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (6.2ms)[0m  [1mINSERT INTO "comments" ("comment", "date_time", "photo_id", "user_id") VALUES (?, ?, ?, ?)[0m  [["comment", "Waaay to gay"], ["date_time", nil], ["photo_id", "1"], ["user_id", "3"]]
+  [1m[35m (24.7ms)[0m  commit transaction
+Redirected to http://ec2-50-17-62-212.compute-1.amazonaws.com:3000/photo/index?id=1
+Completed 302 Found in 42ms (ActiveRecord: 31.0ms)
+
+
+Started GET "/photo/index?id=1" for 171.66.172.73 at Thu May 16 03:35:43 +0000 2013
+Processing by PhotoController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE (user_id = CAST( 1 AS character varying(140) ))
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE (photo_id = CAST( 2 AS character varying(140) ))[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE (photo_id = CAST( 3 AS character varying(140) ))[0m
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered photo/index.html.erb within layouts/application (1.1ms)
+  Rendered shared/_logstatus.html.erb (0.1ms)
+Completed 200 OK in 125ms (Views: 102.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/mufasa.css?body=1" for 171.66.172.73 at Thu May 16 03:35:44 +0000 2013
+Served asset /mufasa.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 171.66.172.73 at Thu May 16 03:35:44 +0000 2013
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 171.66.172.73 at Thu May 16 03:35:44 +0000 2013
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 171.66.172.73 at Thu May 16 03:35:44 +0000 2013
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 171.66.172.73 at Thu May 16 03:35:44 +0000 2013
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photo.js?body=1" for 171.66.172.73 at Thu May 16 03:35:44 +0000 2013
+Served asset /photo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 171.66.172.73 at Thu May 16 03:35:44 +0000 2013
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 171.66.172.73 at Thu May 16 03:35:44 +0000 2013
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ness.png" for 171.66.172.73 at Thu May 16 03:35:44 +0000 2013
+Served asset /ness.png - 304 Not Modified (0ms)
+
+
+Started GET "/photo/index?id=1" for 171.66.172.73 at Thu May 16 03:35:47 +0000 2013
+Processing by PhotoController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (user_id = CAST( 1 AS character varying(140) ))[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE (photo_id = CAST( 2 AS character varying(140) ))
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE (photo_id = CAST( 3 AS character varying(140) ))
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered photo/index.html.erb within layouts/application (1.1ms)
+  Rendered shared/_logstatus.html.erb (0.2ms)
+Completed 200 OK in 108ms (Views: 99.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/mufasa.css?body=1" for 171.66.172.73 at Thu May 16 03:35:47 +0000 2013
+Served asset /mufasa.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 171.66.172.73 at Thu May 16 03:35:47 +0000 2013
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 171.66.172.73 at Thu May 16 03:35:47 +0000 2013
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 171.66.172.73 at Thu May 16 03:35:47 +0000 2013
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photo.js?body=1" for 171.66.172.73 at Thu May 16 03:35:47 +0000 2013
+Served asset /photo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 171.66.172.73 at Thu May 16 03:35:47 +0000 2013
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 171.66.172.73 at Thu May 16 03:35:47 +0000 2013
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 171.66.172.73 at Thu May 16 03:35:47 +0000 2013
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ness.png" for 171.66.172.73 at Thu May 16 03:35:47 +0000 2013
+Served asset /ness.png - 304 Not Modified (0ms)
+
+
+Started POST "/comments/create?id=3" for 171.66.172.73 at Thu May 16 03:42:11 +0000 2013
+Processing by CommentsController#create as HTML
+  Parameters: {"id"=>"3", "comment"=>{"photo_id"=>"1", "comment"=>"Waaay to gay", "user_id"=>"3"}, "utf8"=>"✓", "authenticity_token"=>"Lfym8AX3PLrnCzcO8EPq0tv5E4+otSoSYpnGZ44W0N8=", "commit"=>"Post Comment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "comments" ("comment", "date_time", "photo_id", "user_id") VALUES (?, ?, ?, ?)  [["comment", "Waaay to gay"], ["date_time", nil], ["photo_id", "1"], ["user_id", "3"]]
+  [1m[36m (13.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://ec2-50-17-62-212.compute-1.amazonaws.com:3000/photo/index?id=1
+Completed 302 Found in 30ms (ActiveRecord: 15.3ms)
+
+
+Started GET "/photo/index?id=1" for 171.66.172.73 at Thu May 16 03:42:11 +0000 2013
+Processing by PhotoController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (user_id = CAST( 1 AS character varying(140) ))[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE (photo_id = CAST( 2 AS character varying(140) ))
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE (photo_id = CAST( 3 AS character varying(140) ))
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered photo/index.html.erb within layouts/application (1.4ms)
+  Rendered shared/_logstatus.html.erb (0.1ms)
+Completed 200 OK in 130ms (Views: 32.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/mufasa.css?body=1" for 171.66.172.73 at Thu May 16 03:42:11 +0000 2013
+Served asset /mufasa.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 171.66.172.73 at Thu May 16 03:42:11 +0000 2013
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 171.66.172.73 at Thu May 16 03:42:11 +0000 2013
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 171.66.172.73 at Thu May 16 03:42:11 +0000 2013
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 171.66.172.73 at Thu May 16 03:42:11 +0000 2013
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photo.js?body=1" for 171.66.172.73 at Thu May 16 03:42:11 +0000 2013
+Served asset /photo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 171.66.172.73 at Thu May 16 03:42:11 +0000 2013
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 171.66.172.73 at Thu May 16 03:42:11 +0000 2013
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ness.png" for 171.66.172.73 at Thu May 16 03:42:11 +0000 2013
+Served asset /ness.png - 304 Not Modified (0ms)
+
+
+Started GET "/photo/index?id=1" for 171.66.172.73 at Thu May 16 03:42:15 +0000 2013
+Processing by PhotoController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE (user_id = CAST( 1 AS character varying(140) ))
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE (photo_id = CAST( 2 AS character varying(140) ))[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE (photo_id = CAST( 3 AS character varying(140) ))[0m
+  Rendered shared/_photos.html.erb (0.1ms)
+  Rendered photo/index.html.erb within layouts/application (1.3ms)
+  Rendered shared/_logstatus.html.erb (0.1ms)
+Completed 200 OK in 113ms (Views: 34.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 171.66.172.73 at Thu May 16 03:42:15 +0000 2013
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mufasa.css?body=1" for 171.66.172.73 at Thu May 16 03:42:15 +0000 2013
+Served asset /mufasa.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 171.66.172.73 at Thu May 16 03:42:15 +0000 2013
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photo.js?body=1" for 171.66.172.73 at Thu May 16 03:42:15 +0000 2013
+Served asset /photo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 171.66.172.73 at Thu May 16 03:42:15 +0000 2013
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 171.66.172.73 at Thu May 16 03:42:15 +0000 2013
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 171.66.172.73 at Thu May 16 03:42:15 +0000 2013
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 171.66.172.73 at Thu May 16 03:42:15 +0000 2013
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ness.png" for 171.66.172.73 at Thu May 16 03:42:16 +0000 2013
+Served asset /ness.png - 304 Not Modified (0ms)

@@ -1,4 +1,8 @@
 Project4::Application.routes.draw do
+  get "comments/new"
+
+  get "comments/create"
+
   get "photo/index"
   
   get "users/login"
