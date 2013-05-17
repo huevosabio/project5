@@ -1,7 +1,7 @@
 <h1><%=  @display_user %></h1>
 <% @photos.each do |foto, commentArray| %>
     <ul>
-    <img src="/images/<%=foto.file_name%>"><br>
+    <img class=photo src="/images/<%=foto.file_name%>"><br>
     <b>Comments</b>
     <ul class="boxlisting">
     <% for comment in commentArray %>

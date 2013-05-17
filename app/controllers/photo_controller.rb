@@ -23,4 +23,26 @@ class PhotoController < ApplicationController
       end
       @photos = dummyHash
   end
+  
+  def new
+      if session[:id]
+          @title = "Upload Photo"
+      else
+          redirect_to(:controller => 'users', :action => 'login')
+      end
+  end
+  
+  def create
+      new_photo = Photo.new(:user_id => params[:photo][:user_id], :date_time => Time.now, :file_name => params[:photo][:file_name].original_filename)
+      name = new_photo.file_name
+      directory = "public/images/"
+      path = File.join(directory, name)
+      File.open(path, "wb") { |f| f.write(params[:photo][:file_name].read) }
+      flash[:notice] = "File uploaded"
+      if new_photo.save
+          redirect_to(:action => index, :id => session[:id])
+      else
+          redirect_to(:back, :flash => {:message => 'An error ocurred with the photo upload'})
+      end
+  end
 end

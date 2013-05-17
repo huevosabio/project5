@@ -1,5 +1,5 @@
 <h1>New Comment</h1>
-<img src="/images/<%=@photo.file_name%>"><br>
+<img class=photo src="/images/<%=@photo.file_name%>"><br>
 <p><%= flash[:message] %></p>
 <%= form_for(:comment, :url => {:action => :create, :id => @photo.id}) do |form| %>
     <%= form.label(:comment, "Comment:")%>

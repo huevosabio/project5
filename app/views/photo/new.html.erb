@@ -1,0 +1,6 @@
+<h1>Photo Upload</h1>
+<%= form_for(:photo, :url => {:action => :create}) do |f| %>
+  Browse File: <%= f.file_field :file_name %><br />
+  <%= f.hidden_field :user_id, :value => session[:id]%>
+  <%= f.submit %>
+<% end %>
