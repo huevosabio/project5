@@ -3,6 +3,9 @@
 <%= form_for(:user, :url => {:action => :post_login}) do |form| %>
     <%= form.label(:username, "Username:")%>
     <%= form.text_field(:username) %>
+    <%= form.label(:username, "Password:")%>
+    <%= form.password_field(:password) %>
     <%= form.submit "Login" %>
 <% end %>
+<a class=actionlist href='/users/new'>Sign Up!</a>
 </ul>

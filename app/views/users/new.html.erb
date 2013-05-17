@@ -1,0 +1,14 @@
+<h1><%=@title%></h1>
+<p><%= flash[:message] %></p>
+<%= form_for(:user, :url => {:action => :create}) do |form| %>
+    <%= form.label(:first_name, "First Name:")%>
+    <%= form.text_field(:first_name) %>
+    <%= form.label(:last_name, "Last Name:")%>
+    <%= form.text_field(:last_name) %>
+    <%= form.label(:username, "Choose Username:")%>
+    <%= form.text_field(:username) %>
+    <%= form.label(:username, "Pick a Password:")%>
+    <%= form.password_field(:password) %>
+    <%= form.submit "Login" %>
+<% end %>
+</ul>

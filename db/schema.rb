@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130515212019) do
+ActiveRecord::Schema.define(:version => 20130517203645) do
 
   create_table "comments", :force => true do |t|
     t.string   "photo_id"
@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(:version => 20130515212019) do
     t.string "first_name"
     t.string "last_name"
     t.string "login"
+    t.string "password_digest"
+    t.string "salt"
   end
 
 end

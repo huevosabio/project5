@@ -37,6 +37,11 @@ li.header{
 	float:right;
 	padding-left:10px;
 	padding-right:10px;
+    max-height:30px;
+}
+
+img.header{
+    height:30px;
 }
 
 input[type="submit"]{
@@ -102,16 +107,14 @@ a.quiz {
 a.actionlist{
 	background-color: rgb(102, 205, 170);
 	padding-top: 5px;
-	border-width: 0px;
+	border-width: 0;
 	padding-bottom: 5px;
 	padding-left: 10px;
 	padding-right: 10px;
 	color: white;
 	border-radius: 5px;
 	text-decoration: none;
-	margin-right: 15%;
 	position: relative;
-	margin-right: 3%;
 	font-size: 12px;
 }
 
